@@ -1,3 +1,11 @@
-*.class
-*.pyc
-*.pyo
+/*
+!cache/
+!config/
+!editor/
+!library/
+!module/
+!template/
+!uploads/
+!.gitignore
+!index.php
+!README.md
