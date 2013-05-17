@@ -2,12 +2,34 @@
 
 /**
  * @package Papirus
- * @author Mesut Erdemir <erdemirmesut@gmail.com>
- * @copyright 2013 Papirus (http://egolabs.org)
- * @license Read LICENSE file under root folder
- * @link https://github.com/egolabs/papirus
+ * Sanitize data 
+ * 
  */
 class Papirus_Filter {
-}
 
-// End of Papirus_Filter.php
+    
+    public function esc_xss()
+    {
+        // TODO remove js
+        // TODO remove special tags
+    }
+    
+    public function esc_html($string)
+    {
+        return filter_var($string, FILTER_SANITIZE_STRING);  
+    }
+    
+    public function esc_email($email)
+    {
+        return filter_var($email,FILTER_SANITIZE_EMAIL);
+    }
+    
+    public function esc_filename()
+    {
+        // TODO filename sanitasyon
+    }
+    
+    
+    
+    
+}
